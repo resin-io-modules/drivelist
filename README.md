@@ -29,8 +29,12 @@ Examples (the output will vary depending on your machine):
 ```js
 const drivelist = require('drivelist');
 
-const drives = await drivelist.list();
-console.log(drives);
+getDrives();
+
+async function getDrives () {
+    const drives = await drivelist.list();
+    console.log(drives);
+}
 ```
 
 ***
@@ -176,10 +180,14 @@ Documentation
 ```js
 const drivelist = require('drivelist');
 
-const drives = await drivelist.list();
-drives.forEach((drive) => {
-  console.log(drive);
-});
+getDrives();
+
+async function getDrives () {
+    const drives = await drivelist.list();
+    drives.forEach((drive) => {
+        console.log(drive);
+      });
+}
 ```
 
 Tests
